@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Calculator app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+    <link rel="stylesheet" href="style.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <div class="calculator-bg">
+      <div class="container">
+        <!-- header  -->
+        <div class="header">
+          <h1>calc</h1>
+          <div class="theme-select">
+            <p>THEME</p>
+            <div class="radio">
+              <div class="t_no">
+                <span>1</span>
+                <span>2</span>
+                <span>3</span>
+              </div>
+              <div class="radio-buttons">
+                <input type="radio" name="theme" value="theme1" id="theme-1" />
+                <input type="radio" name="theme" value="theme2" id="theme-2" />
+                <input type="radio" name="theme" value="theme3" id="theme-3" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- calculator screen  -->
+        <div class="cal-screen">
+          <input
+            data-previous-operand
+            type="text"
+            name=""
+            id="calc_screen"
+            autocomplete="off"
+          />
+        </div>
+        <!-- calculator keypad -->
+        <div class="cal-keypad">
+          <!-- Row-1 -->
+          <div class="key">7</div>
+          <div class="key">8</div>
+          <div class="key">9</div>
+          <div class="key blue" id="Delete">DEL</div>
+          <!-- Row-2 -->
+          <div class="key">4</div>
+          <div class="key">5</div>
+          <div class="key">6</div>
+          <div class="key" data-operation>+</div>
+          <!-- Row-3 -->
+          <div class="key">1</div>
+          <div class="key">2</div>
+          <div class="key">3</div>
+          <div class="key" data-operation>-</div>
+          <!-- Row-4 -->
+          <div class="key">.</div>
+          <div class="key">0</div>
+          <div class="key" data-operation>/</div>
+          <div class="key" data-operation>x</div>
+          <!-- Row-5 -->
+          <div class="key blue reset" id="reset">RESET</div>
+          <div class="key orange" id="result">=</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </body>
+</html>
