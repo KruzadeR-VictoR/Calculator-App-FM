@@ -4,7 +4,7 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: 'League Spartan', sans-serif;
+  font-family: "League Spartan", sans-serif;
 }
 
 .calculator-bg {
@@ -43,7 +43,7 @@
       -ms-flex-align: center;
           align-items: center;
   gap: 2rem;
-  padding: 0 .5rem;
+  padding: 0 0.5rem;
 }
 
 .calculator-bg .container .header .theme-select p {
@@ -58,6 +58,7 @@
       -ms-flex-pack: center;
           justify-content: center;
   gap: 1.2rem;
+  padding-bottom: .1rem;
 }
 
 .calculator-bg .container .header .theme-select .radio .radio-buttons {
@@ -68,13 +69,24 @@
       -ms-flex-pack: center;
           justify-content: center;
   gap: 1rem;
-  padding: .3rem .5rem;
+  padding: 0.3rem 0.5rem;
   border-radius: 2rem;
   background-color: #232c43;
 }
 
 .calculator-bg .container .header .theme-select .radio .radio-buttons input {
-  accent-color: #d03f2f;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: #d03f2f;
+  opacity: 0;
+}
+
+.calculator-bg .container .header .theme-select .radio .radio-buttons input:hover {
+  cursor: pointer;
 }
 
 .calculator-bg .container .cal-screen {
@@ -196,7 +208,7 @@
 }
 
 .theme-2 .radio-buttons input {
-  accent-color: #ca5502 !important;
+  background-color: #ca5502 !important;
 }
 
 .theme-3 {
@@ -244,7 +256,7 @@
 }
 
 .theme-3 .radio-buttons input {
-  accent-color: #871c9c !important;
+  background-color: #871c9c !important;
 }
 
 @media only screen and (max-width: 600px) {

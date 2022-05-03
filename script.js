@@ -2,6 +2,8 @@ const screen = document.querySelector("#calc_screen");
 const keys = document.querySelectorAll(".key");
 const Dots = document.querySelectorAll(".radio-buttons input");
 let value = "";
+const buttons = document.querySelectorAll(".button");
+let arr = [...Dots];
 //  themes
 const calcBG = document.querySelector(".calculator-bg");
 const keyBG = document.querySelector(".cal-keypad");
@@ -10,6 +12,18 @@ const reset = document.querySelectorAll("#reset");
 const result = document.querySelectorAll("#result");
 
 // theme controls
+arr[0].style.opacity = "1";
+arr.forEach((dot) => {
+  dot.addEventListener("click", () => {
+    dot.style.opacity = "1";
+
+    arr.filter((item) => {
+      return item != dot;
+    }).forEach((item) => {
+      item.style.opacity = "0";
+    });
+  });
+});
 
 Dots.forEach((dot) => {
   dot.addEventListener("click", (e) => {
@@ -17,29 +31,14 @@ Dots.forEach((dot) => {
     if (theme == "theme1") {
       document.body.classList.remove("theme-2");
       document.body.classList.remove("theme-3");
-      // calcBG.style.backgroundColor = "hsl(222, 26%, 31%)";
-      // screen.style.backgroundColor = "hsl(224, 36%, 15%)";
-      // keyBG.style.backgroundColor = "hsl(223, 31%, 20%)";
-      // calcBG.style.color = " hsl(221, 14%, 31%)";
-      // del.style.backgroundColor = "hsl(225, 21%, 49%)";
-      // del.style.color = "red";
     } else if (theme == "theme2") {
       document.body.classList.add("theme-2");
       document.body.classList.remove("theme-1");
       document.body.classList.remove("theme-3");
-      // calcBG.style.backgroundColor = "hsl(0, 0%, 90%)";
-      // screen.style.backgroundColor = "hsl(0, 0%, 93%)";
-      // keyBG.style.backgroundColor = "hsl(0, 5%, 81%)";
-      // calcBG.style.color = "hsl(222, 26%, 31%)";
-      // del.style.backgroundColor = "hsl(185, 42%, 37%)";
     } else if (theme == "theme3") {
       document.body.classList.add("theme-3");
       document.body.classList.remove("theme-1");
       document.body.classList.remove("theme-2");
-      // calcBG.style.backgroundColor = "hsl(268, 75%, 9%)";
-      // screen.style.backgroundColor = "hsl(268, 71%, 12%)";
-      // keyBG.style.backgroundColor = "hsl(268, 71%, 12%)";
-      // calcBG.style.color = "hsl(222, 26%, 31%)";
     }
   });
 });
