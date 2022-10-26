@@ -28,7 +28,7 @@
     <script src="./script.js" defer></script>
   </head>
   <body>
-    <div class="calculator-bg">
+    <main class="calculator-bg">
       <div class="container">
         <!-- header  -->
         <div class="header">
@@ -42,9 +42,30 @@
                 <span>3</span>
               </div>
               <div class="radio-buttons">
-                <input class="button" type="radio" name="theme" value="theme1" id="theme-1" />
-                <input class="button" type="radio" name="theme" value="theme2" id="theme-2" />
-                <input class="button" type="radio" name="theme" value="theme3" id="theme-3" />
+                <label for="theme-1" aria-label="radio input"></label>
+                <input
+                  class="button"
+                  type="radio"
+                  name="theme"
+                  value="theme1"
+                  id="theme-1"
+                />
+                <label for="theme-2" aria-label="radio input"></label>
+                <input
+                  class="button"
+                  type="radio"
+                  name="theme"
+                  value="theme2"
+                  id="theme-2"
+                />
+                <label for="theme-3" aria-label="radio input"></label>
+                <input
+                  class="button"
+                  type="radio"
+                  name="theme"
+                  value="theme3"
+                  id="theme-3"
+                />
               </div>
             </div>
           </div>
@@ -54,7 +75,7 @@
           <input
             data-previous-operand
             type="text"
-            name=""
+            name="cal-screen"
             id="calc_screen"
             autocomplete="off"
           />
@@ -86,7 +107,7 @@
           <div class="key orange" id="result">=</div>
         </div>
       </div>
-    </div>
+    </main>
 
     <div class="attribution">
       Challenge by
