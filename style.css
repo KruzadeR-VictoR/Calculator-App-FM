@@ -58,7 +58,7 @@
       -ms-flex-pack: center;
           justify-content: center;
   gap: 1.2rem;
-  padding-bottom: .1rem;
+  padding-bottom: 0.1rem;
 }
 
 .calculator-bg .container .header .theme-select .radio .radio-buttons {
@@ -72,6 +72,10 @@
   padding: 0.3rem 0.5rem;
   border-radius: 2rem;
   background-color: #232c43;
+}
+
+.calculator-bg .container .header .theme-select .radio .radio-buttons label {
+  display: none;
 }
 
 .calculator-bg .container .header .theme-select .radio .radio-buttons input {
