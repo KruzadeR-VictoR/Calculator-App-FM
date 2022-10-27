@@ -14,7 +14,7 @@
 
     <title>Frontend Mentor | Calculator app</title>
 
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->    
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <link rel="stylesheet" href="style.css" />
     <script src="./script.js" defer></script>
   </head>
@@ -32,7 +32,7 @@
                 <span>2</span>
                 <span>3</span>
               </div>
-              <div class="radio-buttons">                
+              <div class="radio-buttons">
                 <input
                   class="button"
                   type="radio"
@@ -40,7 +40,7 @@
                   value="theme1"
                   id="theme-1"
                   aria-label="radio input"
-                />                
+                />
                 <input
                   class="button"
                   type="radio"
@@ -48,7 +48,7 @@
                   value="theme2"
                   id="theme-2"
                   aria-label="radio input"
-                />                
+                />
                 <input
                   class="button"
                   type="radio"
@@ -63,13 +63,13 @@
         </div>
         <!-- calculator screen  -->
         <div class="cal-screen">
-          <label for="calc_screen"></label>
           <input
             data-previous-operand
             type="text"
             name="cal-screen"
             id="calc_screen"
             autocomplete="off"
+            aria-label="calc screen"
           />
         </div>
         <!-- calculator keypad -->
@@ -99,6 +99,6 @@
           <div class="key orange" id="result">=</div>
         </div>
       </div>
-    </main>    
+    </main>
   </body>
 </html>
